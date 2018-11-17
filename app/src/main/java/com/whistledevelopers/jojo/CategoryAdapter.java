@@ -1,11 +1,13 @@
 package com.whistledevelopers.jojo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -30,6 +32,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
         Categories categories=categoryList.get(position);
         holder.txtCategory.setText(categories.getCategory());
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context,CategoryListActivity.class));
+
+            }
+        });
 
     }
 
@@ -40,9 +49,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
     public class CategoryViewHolder extends RecyclerView.ViewHolder {
         TextView txtCategory;
+        LinearLayout linearLayout;
         public CategoryViewHolder(View itemView) {
             super(itemView);
             txtCategory=(TextView) itemView.findViewById(R.id.txt_category);
+            linearLayout=(LinearLayout)itemView.findViewById(R.id.linear_cateogory);
 
         }
     }

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoryDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/card_view">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/avatar" />
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/gotham"
+                    android:gravity="center"
+                    android:text="WD Electrican" />
+
+                <TextView
+                    android:id="@+id/text_organisation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/gotham"
+                    android:gravity="center"
+                    android:text="Sales and Service" />
+
+                <TextView
+                    android:id="@+id/text_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/gotham"
+                    android:gravity="center"
+                    android:text="Avadi,Chennai" />
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_mobile"
+                    android:layout_weight="1"
+                    android:text="Contact Number"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/gotham"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_mobile_num"
+                    android:layout_weight="1"
+                    android:text="9876543210"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/gotham"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_email"
+                    android:layout_weight="1"
+                    android:text="Email ID"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/gotham"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_email_id"
+                    android:layout_weight="1"
+                    android:text="email@gmail.com"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/gotham"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_full_add"
+                    android:layout_weight="1"
+                    android:text="Address"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/gotham"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_full_address"
+                    android:layout_weight="1"
+                    android:text="17/19, 3rd cross street,Avadi, chennai-54"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/gotham"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+</LinearLayout>
+    </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Book"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/gotham"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        />
+</RelativeLayout>

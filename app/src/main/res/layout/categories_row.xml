@@ -18,6 +18,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/card_view"
             android:elevation="5dp"
+            android:id="@+id/linear_cateogory"
             >
 
         <TextView
