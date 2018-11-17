@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OtpVerificationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+      >
+        <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OTP Verification"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/tertiary_text_dark"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:gravity="center"
+            android:fontFamily="@font/gotham"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We have sent you access code via SMS"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/gotham"
+            android:textColor="@android:color/tertiary_text_dark"
+            android:gravity="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_bg"
+            android:paddingLeft="10dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:id="@+id/btn_submit"
+            android:text="Submit"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:background="@drawable/button_bg"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:text="Resend again ?"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="bottom"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

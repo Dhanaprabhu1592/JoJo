@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/logo"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_bg"
+            android:layout_margin="10dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:paddingLeft="10dp"
+            android:hint="Name"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_bg"
+            android:layout_margin="10dp"
+            android:paddingLeft="10dp"
+            android:inputType="number"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:hint="Contact Number"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_bg"
+            android:layout_margin="10dp"
+            android:paddingLeft="10dp"
+            android:inputType="number"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:hint="Alternative Number"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_bg"
+            android:layout_margin="10dp"
+            android:paddingLeft="10dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:hint="Email"
+            />
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/btn_register"
+            android:background="@drawable/button_bg"
+            android:text="Sign Up"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gotham"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            />
+
+
+    </LinearLayout>
+</RelativeLayout>
