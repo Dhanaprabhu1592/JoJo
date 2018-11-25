@@ -15,12 +15,12 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> implements Filterable {
+public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.CategoryViewHolder> implements Filterable {
     Context context;
     List<Categories> categoryList;
     public ArrayList<Categories> orig;
 
-    public CategoryAdapter(Context context, List<Categories> categoryList) {
+    public SubCategoryAdapter(Context context, List<Categories> categoryList) {
         this.context=context;
         this.categoryList=categoryList;
     }
@@ -28,7 +28,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     @NonNull
     @Override
     public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(context).inflate(R.layout.categories_row,parent,false);
+        View view= LayoutInflater.from(context).inflate(R.layout.sub_categories_row,parent,false);
         return new CategoryViewHolder(view);
     }
 
@@ -40,7 +40,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context,SubCategoryActivity.class));
+                context.startActivity(new Intent(context,CategoryListActivity.class));
 
             }
         });

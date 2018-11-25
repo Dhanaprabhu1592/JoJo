@@ -35,7 +35,8 @@
             android:name=".BottomNavigation"
             android:label="@string/title_activity_bottom_navigation" />
         <activity android:name=".CategoryListActivity" />
-        <activity android:name=".CategoryDetailActivity"></activity>
+        <activity android:name=".CategoryDetailActivity" />
+        <activity android:name=".SubCategoryActivity"></activity>
     </application>
 
 </manifest>
