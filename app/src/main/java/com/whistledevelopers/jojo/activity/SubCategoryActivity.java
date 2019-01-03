@@ -2,6 +2,7 @@ package com.whistledevelopers.jojo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 
@@ -16,14 +17,26 @@ public class SubCategoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub_category);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview_options);
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
-        HomeFragment.categoryList.clear();
-        categoryList=new ArrayList<>();
+        categoryList = new ArrayList<>();
 
+        categoryList.add(new Categories("Tv Electrician"));
+        categoryList.add(new Categories("Tv Repair"));
+        categoryList.add(new Categories("Carpenter"));
+        categoryList.add(new Categories("Two Wheeler Mechanic"));
+        categoryList.add(new Categories("Car Mechanic"));
+        categoryList.add(new Categories("Painters"));
+        categoryList.add(new Categories("Tv Electrician"));
+        categoryList.add(new Categories("Tv Repair"));
+        categoryList.add(new Categories("Carpenter"));
+        categoryList.add(new Categories("Two Wheeler Mechanic"));
+        categoryList.add(new Categories("Car Mechanic"));
+        categoryList.add(new Categories("Painters"));
         categoryList.add(new Categories("Tv Electrician"));
         categoryList.add(new Categories("Tv Repair"));
         categoryList.add(new Categories("Carpenter"));

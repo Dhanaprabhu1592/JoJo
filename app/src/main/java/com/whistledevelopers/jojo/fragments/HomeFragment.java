@@ -48,6 +48,21 @@ public class HomeFragment extends Fragment {
         categoryList.add(new Categories("Two Wheeler Mechanic"));
         categoryList.add(new Categories("Car Mechanic"));
         categoryList.add(new Categories("Painters"));
+        categoryList.add(new Categories("Sports and Coaching"));
+        categoryList.add(new Categories("Tours and Travel Agents"));
+        categoryList.add(new Categories("Cook"));
+        categoryList.add(new Categories("Wedding and Event Management"));
+        categoryList.add(new Categories("Pet Aanimal Trainers"));
+        categoryList.add(new Categories("Contractors"));
+        categoryList.add(new Categories("News Paper Delivery Boy"));
+        categoryList.add(new Categories("Laundry"));
+        categoryList.add(new Categories("Logistics"));
+        categoryList.add(new Categories("Retail"));
+        categoryList.add(new Categories("Mobile Repair"));
+        categoryList.add(new Categories("Help Others"));
+        categoryList.add(new Categories("Constructions"));
+        categoryList.add(new Categories("Groceries"));
+        categoryList.add(new Categories("Vehicle Rental and Drivers"));
 
         CategoryAdapter categoryAdapter = new CategoryAdapter(getActivity(), categoryList);
         recyclerView.setAdapter(categoryAdapter);
