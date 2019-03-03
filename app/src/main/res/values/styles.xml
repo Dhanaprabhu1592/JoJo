@@ -23,5 +23,6 @@
     <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppLoginTheme" parent="Theme.AccountKit" />
 
 </resources>

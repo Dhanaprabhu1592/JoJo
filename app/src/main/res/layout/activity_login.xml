@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:id="@+id/relative_login"
+    tools:context=".activity.LoginActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,18 +24,23 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:id="@+id/editText_phone"
             android:background="@drawable/edit_bg"
             android:layout_margin="10dp"
             android:paddingLeft="10dp"
+            android:inputType="number"
+            android:maxLines="10"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-            android:hint="Username"
+            android:hint="Mobile Number"
             />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/edit_bg"
+            android:id="@+id/editText_password"
             android:layout_margin="10dp"
             android:paddingLeft="10dp"
+            android:inputType="textPassword"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
             android:hint="Password"
             />
@@ -42,6 +51,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/button_bg"
             android:text="Login"
+            android:id="@+id/btn_login"
             android:layout_gravity="center"
             android:fontFamily="@font/gotham"
             android:textColor="@android:color/white"
@@ -54,8 +64,29 @@
                 android:layout_marginTop="20dp"
                 android:text="Sign Up Here?"
                 android:id="@+id/txt_signUp"
+                android:textColor="@color/colorPrimary"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:gravity="center"
+                android:fontFamily="@font/gotham"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="forgot password?"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/txt_forget_password"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:gravity="center"
                 android:fontFamily="@font/gotham"/>
     </LinearLayout>
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateTint="@color/colorPrimary" />
+
 </RelativeLayout>

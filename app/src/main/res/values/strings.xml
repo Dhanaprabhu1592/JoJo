@@ -10,7 +10,15 @@
     <string name="title_activity_bottom_navigation">BottomNavigation</string>
     <string name="title_home">Home</string>
     <string name="title_profile">Profile</string>
-    <string name="title_settings">Settings</string>
+    <string name="title_support">Support</string>
+    <string name="error_msg">No Data Found</string>
+    <!--<string name="FACEBOOK_APP_ID">581195565665452</string>-->
+    <string name="FACEBOOK_APP_ID">779829812392603</string>
+    <!--<string name="ACCOUNT_KIT_CLIENT_TOKEN">bf852d1d07f2e2458711f2a98770b155</string>-->
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">a8ba3a055a6e8c1e0bc61a39a138543c</string>
+    <string name="userlocation">Welcome! Kindly provide your location to give you a better service </string>
+
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -1,4 +1,4 @@
-package com.whistledevelopers.jojo;
+package com.whistledevelopers.jojo.model;
 
 public class CategoryList {
     String name;

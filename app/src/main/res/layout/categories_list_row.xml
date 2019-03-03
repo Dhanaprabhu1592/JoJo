@@ -21,11 +21,11 @@
             android:orientation="vertical"
             android:padding="5dp">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/list_image"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
                 android:src="@drawable/avatar" />
 
             <TextView
@@ -38,12 +38,12 @@
                 android:layout_toRightOf="@+id/list_image"
                 android:fontFamily="@font/gotham"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                android:textColor="@android:color/black" />
+                android:textColor="@color/colorPrimary" />
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:id="@+id/call_button"
-                android:src="@drawable/ic_call_24dp"
+                android:src="@drawable/ic_call_green_24dp"
                 android:layout_alignRight="@id/txt_category_name"/>
             <TextView
                 android:id="@+id/txt_category_number"
@@ -56,7 +56,7 @@
                 android:layout_toRightOf="@+id/list_image"
                 android:fontFamily="@font/gotham"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                android:textColor="@android:color/black" />
+                android:textColor="@color/colorPrimary" />
 
 
             <TextView
@@ -70,7 +70,20 @@
                 android:layout_toRightOf="@+id/list_image"
                 android:fontFamily="@font/gotham"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                android:textColor="@android:color/black" />
+                android:textColor="@color/colorPrimary" />
+            <TextView
+                android:id="@+id/txt_category_availability"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_category_experience"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/list_image"
+                android:fontFamily="@font/gotham"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimary" />
+
             <TextView
                 android:id="@+id/txt_category_address"
                 android:layout_width="match_parent"
@@ -82,17 +95,18 @@
                 android:layout_toRightOf="@+id/list_image"
                 android:fontFamily="@font/gotham"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                android:textColor="@android:color/black" />
+                android:textColor="@color/colorPrimary" />
          <LinearLayout
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:orientation="horizontal"
-             android:layout_below="@id/txt_category_experience"
-             android:layout_alignEnd="@id/txt_category_number">
+             android:layout_below="@id/list_image"
+             android:layout_marginTop="10dp"
+             >
              <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_star_24dp"
+                android:src="@drawable/ic_star_gold_24dp"
                 android:id="@+id/img_rating"
                 />
             <TextView
@@ -106,8 +120,17 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/gotham"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                android:textColor="@android:color/black" />
+                android:textColor="@color/colorPrimary" />
+
          </LinearLayout>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_navigate_next_black_24dp"
+                android:layout_alignEnd="@id/txt_category_experience"
+                android:id="@+id/img_next"
+                android:layout_below="@id/txt_category_experience"
+                />
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>

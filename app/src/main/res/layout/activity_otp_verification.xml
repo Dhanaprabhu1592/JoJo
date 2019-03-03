@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OtpVerificationActivity">
+    tools:context=".activity.OtpVerificationActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:text="OTP Verification"
             android:layout_marginTop="10dp"
-            android:textColor="@android:color/tertiary_text_dark"
+            android:textColor="@color/colorPrimary"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
             android:gravity="center"
             android:fontFamily="@font/gotham"
@@ -35,7 +35,7 @@
             android:text="We have sent you access code via SMS"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/gotham"
-            android:textColor="@android:color/tertiary_text_dark"
+            android:textColor="@color/colorPrimary"
             android:gravity="center"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
             />

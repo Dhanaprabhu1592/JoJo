@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release {
+            keyAlias 'key0'
+            keyPassword 'Dhana@123'
+            storeFile file('C:/Users/Dhan Prabhu/Desktop/App Key (2)/App Key/newKey.jks')
+            storePassword 'Dhana@123'
+        }
+    }
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.whistledevelopers.jojo"
@@ -14,6 +22,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }
@@ -30,4 +39,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+    implementation 'com.facebook.android:account-kit-sdk:4.+'
+    implementation 'com.google.android.gms:play-services-location:11.8.0'
+    implementation 'com.squareup.picasso:picasso:2.4.0'
+
 }

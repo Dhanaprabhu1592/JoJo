@@ -1,10 +1,12 @@
-package com.whistledevelopers.jojo;
+package com.whistledevelopers.jojo.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.whistledevelopers.jojo.R;
 
 public class OtpVerificationActivity extends AppCompatActivity {
     Button btn_submit;

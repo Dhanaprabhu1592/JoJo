@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/text_title"
+        android:elevation="5dp"
+        android:background="@color/colorPrimary"
+        android:text="JoJu"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/gotham"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_title"
+        android:text="Could not able to get your location..Please enter your address manually"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorPrimary"
+        android:inputType="phone"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:gravity="center"
+        android:fontFamily="@font/gotham"
+        android:id="@+id/txt_display_message"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_address"
+        android:layout_below="@+id/txt_display_message"
+        android:background="@drawable/edit_bg"
+        android:layout_margin="10dp"
+        android:inputType="text"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:padding="10dp"
+        android:maxLength="10"
+        android:hint="Address"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_city"
+        android:layout_below="@+id/editText_address"
+        android:background="@drawable/edit_bg"
+        android:layout_margin="10dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:padding="10dp"
+        android:visibility="visible"
+        android:inputType="text"
+        android:maxLength="10"
+        android:hint="City"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_postal"
+        android:layout_below="@+id/editText_city"
+        android:background="@drawable/edit_bg"
+        android:layout_margin="10dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:padding="10dp"
+        android:visibility="visible"
+        android:inputType="number"
+        android:maxLength="6"
+        android:hint="Postal Code"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/editText_postal">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/btn_cancel"
+            android:layout_weight="1"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Cancel"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gotham"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/btn_submit"
+            android:layout_weight="1"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Submit"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gotham"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            />
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateTint="@android:color/holo_red_dark"
+        />
+
+
+
+</RelativeLayout>

@@ -1,7 +1,5 @@
-package com.whistledevelopers.jojo;
+package com.whistledevelopers.jojo.fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,16 +12,30 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
+import android.widget.ProgressBar;
 import android.widget.SearchView;
+import android.widget.Toast;
+
+import com.whistledevelopers.jojo.Api;
+import com.whistledevelopers.jojo.model.Categories;
+import com.whistledevelopers.jojo.adapter.CategoryAdapter;
+import com.whistledevelopers.jojo.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class HomeFragment extends Fragment {
     RecyclerView recyclerView;
     public static List<Categories> categoryList;
     CategoryAdapter categoryAdapter;
+    private ProgressBar spinner;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,12 +48,50 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        spinner = (ProgressBar)view.findViewById(R.id.progressBar);
+
+
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview_options);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
         recyclerView.setHasFixedSize(true);
         categoryList = new ArrayList<>();
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Api.BASE_URl)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        final Api api = retrofit.create(Api.class);
+        Call<Categories> call = api.getCategories("0");
+
+        call.enqueue(new Callback<Categories>() {
+            @Override
+            public void onResponse(Call<Categories> call, Response<Categories> response) {
+                spinner.setVisibility(View.GONE);
+                List<Categories> categories = response.body().getData();
+
+                for(int i=0;i<categories.size();i++){
+                    categoryList.add(new Categories(categories.get(i).getName(),categories.get(i).getCover(),categories.get(i).getId()));
+                }
+                CategoryAdapter categoryAdapter = new CategoryAdapter(getActivity(), categoryList);
+                recyclerView.setAdapter(categoryAdapter);
+                categoryAdapter.notifyDataSetChanged();
 
 
+            }
+
+            @Override
+            public void onFailure(Call<Categories> call, Throwable t) {
+                spinner.setVisibility(View.GONE);
+                if(!t.getMessage().equals(null)){
+                    Toast.makeText(getActivity(), t.getMessage(), Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getActivity(), "Please Try again later!", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
+
+/*
         categoryList.add(new Categories("Electrician"));
         categoryList.add(new Categories("Plumber"));
         categoryList.add(new Categories("Carpenter"));
@@ -64,9 +114,8 @@ public class HomeFragment extends Fragment {
         categoryList.add(new Categories("Groceries"));
         categoryList.add(new Categories("Vehicle Rental and Drivers"));
 
-        CategoryAdapter categoryAdapter = new CategoryAdapter(getActivity(), categoryList);
-        recyclerView.setAdapter(categoryAdapter);
-        categoryAdapter.notifyDataSetChanged();
+
+*/
 
         // Inflate the layout for this fragment
         return view;
@@ -97,5 +146,12 @@ public class HomeFragment extends Fragment {
 
 
         super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        MenuItem menuItem=menu.findItem(R.id.action_settings);
+        menuItem.setVisible(false);
+        super.onPrepareOptionsMenu(menu);
     }
 }

@@ -1,19 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsFragment">
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".fragments.SettingsFragment">
 
+
+    <!--
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:fontFamily="@font/gotham"
+            android:textColor="@color/colorGray"
+            android:text="Need Data To Update This Activity......"
+            android:gravity="center"/>
+    -->
+    <Button
+        android:id="@+id/btn_call"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/support_call_button"
+        android:drawableLeft="@drawable/ic_call_white_24dp"
+        android:text="Call Us"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+
+
+        />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/gotham"
-        android:textColor="@color/colorGray"
-        android:text="Need Data To Update This Activity......"
-        android:gravity="center"/>
+        android:text="Address :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
 
-</FrameLayout>
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/gotham"
+        android:text="No-3,Alagesan Nagar,"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/gotham"
+        android:text="Vandalur to Kelambakkam main road "
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gotham"
+        android:layout_marginTop="2dp"
+        android:text="Kolapakkam,Chennai-600048"
+        android:textColor="#000000" />
+
+
+</LinearLayout>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#808080</color>
-    <color name="colorPrimaryDark">#808080</color>
-    <color name="colorAccent">#808080</color>
-    <color name="colorGray">#808080</color>
-
-    <color name="black_overlay">#66000000</color>
+    <color name="colorPrimary">#4987DE</color>
+    <color name="colorPrimaryDark">#4987DE</color>
+    <color name="colorAccent">#4987DE</color>
+    <color name="colorGray">#4987DE</color>
+    <color name="black_overlay">#4987DE</color>
+    <color name="support_call_button">#33E839</color>
 </resources>

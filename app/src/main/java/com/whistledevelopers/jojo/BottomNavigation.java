@@ -24,7 +24,7 @@ public class BottomNavigation extends AppCompatActivity {
                     mTextMessage.setText(R.string.title_profile);
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_settings);
+                    mTextMessage.setText(R.string.title_support);
                     return true;
             }
             return false;

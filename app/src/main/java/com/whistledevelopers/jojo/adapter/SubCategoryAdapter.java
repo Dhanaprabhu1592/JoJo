@@ -1,4 +1,4 @@
-package com.whistledevelopers.jojo;
+package com.whistledevelopers.jojo.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,11 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.whistledevelopers.jojo.R;
+import com.whistledevelopers.jojo.activity.CategoryListActivity;
+import com.whistledevelopers.jojo.activity.SubCategoryActivity;
+import com.whistledevelopers.jojo.model.Categories;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,12 +40,15 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
 
-        Categories categories=categoryList.get(position);
-        holder.txtCategory.setText(categories.getCategory());
+        final Categories categories=categoryList.get(position);
+        holder.txtCategory.setText(categories.getName());
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context,CategoryListActivity.class));
+                Intent intentToSubCategory=new Intent(context,CategoryListActivity.class);
+                intentToSubCategory.putExtra("experts",String.valueOf(categories.getId()));
+                context.startActivity(intentToSubCategory);
+
 
             }
         });
@@ -64,7 +72,7 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
                 if (constraint != null) {
                     if (orig != null && orig.size() > 0) {
                         for (final Categories g : orig) {
-                            if (g.getCategory().toLowerCase()
+                            if (g.getName().toLowerCase()
                                     .contains(constraint.toString()))
                                 results.add(g);
                         }
